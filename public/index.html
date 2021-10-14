@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Cadastro</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/view.css">
+    <link rel="shortcut icon" href="../img/ico/estoque.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <body onload="mostrarResultado()">
+        <main id="app" class="texto-centro">
+            <header class="texto-principal">
+                <h1>Gestão de Cadastro</h1>
+            </header>
+            <section id="dados" class="entrada-dados container">
+                <p>Preencha os campos para adicionar ou remover um cadastro! &#128230;</p>
+                <input class="entradas" type="text" name="produto" id="produto" placeholder="Nome do Item"
+                    autocomplete="off" /></br>
+                <input class="entradas" type="text" name="cliente" id="cliente" placeholder="Dados do cliente"
+                    autocomplete="off" /></br>
+                <input class="entradas" type="text" name="endereco" id="endereco" placeholder="Endereço"
+                    autocomplete="off" /></br>
+                <button class="botoes" name="adicionar" id="adicionar"
+                    onclick="verificar(), adicionar(), mostrarResultado()">ADICIONAR</button class="botoes">
+                <button class="botoes" name="excluir" id="excluir"
+                    onclick="excluir(), mostrarResultado()">EXCLUIR</button>
+            </section>
+            <section id="estoque">
+                <div id="comport-table">
+                    <table class="saida-dados container" style="table-layout: fixed; width: 100%;">
+                        <th>ITEM</th>
+                        <th>DADOS DO CLIENTE</th>
+                        <th>ENDEREÇO</th>
+                        <th>REMOVER</th>
+                        <tbody id="resultados"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer class="rodape texto-centro">
+
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</body>
+
+</html>
